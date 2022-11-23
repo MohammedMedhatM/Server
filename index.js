@@ -23,8 +23,7 @@ app.use("/user", userRoutes);
 app.use("/request", requestRoutes);
 app.use("/message", messageRoutes);
 
-const CONNECTION_URL =
-  "mongodb://Medo:mohd2010@172.30.200.156:8080/?authSource=admin";
+const CONNECTION_URL = process.env.DATABASE_URL;
 const PORT = process.env.PORT || 8080;
 
 const httpServer = createServer(app);
